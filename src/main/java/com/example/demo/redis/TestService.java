@@ -1,6 +1,7 @@
 package com.example.demo.redis;
 
 import com.example.demo.redis.domain.Student;
+import com.example.demo.redis.dto.AgeAndNameRequest;
 import com.example.demo.redis.dto.StudentListResponse;
 import com.example.demo.redis.dto.StudentRequest;
 import com.example.demo.redis.dto.StudentResponse;
@@ -34,10 +35,10 @@ public class TestService {
         return new StudentResponse(student.getStudentNumber(), student.getName(), student.getAge());
     }
 
-    @Cacheable(value = "StudentListResponse", key = "#age")
-    public StudentListResponse findAge(int age) {
+    @Cacheable(value = "StudentListResponse", key = "#request.age")
+    public StudentListResponse findAge(AgeAndNameRequest request) {
         System.out.println("===> FIND 로직 실행");
-        List<Student> list = studentRepository.findByAge(age);
+        List<Student> list = studentRepository.findByAge(request.getAge());
 
         List<StudentResponse> reponseList = list.stream().map(entity -> {
             return new StudentResponse(entity.getStudentNumber(), entity.getName(), entity.getAge());
@@ -45,4 +46,14 @@ public class TestService {
         return new StudentListResponse(reponseList);
     }
 
+    @Cacheable(value = "StudentListResponse", key = "#request")
+    public StudentListResponse findNameAndAge(AgeAndNameRequest request) {
+        System.out.println("===> FIND NAME AND AGE 로직 실행");
+        List<Student> list = studentRepository.findNameAndAge(request.getAge(), request.getName());
+
+        List<StudentResponse> reponseList = list.stream().map(entity -> {
+            return new StudentResponse(entity.getStudentNumber(), entity.getName(), entity.getAge());
+        }).collect(Collectors.toList());
+        return new StudentListResponse(reponseList);
+    }
 }

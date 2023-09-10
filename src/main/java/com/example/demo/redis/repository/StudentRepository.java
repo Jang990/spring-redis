@@ -11,4 +11,7 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student, Long> {
     @Query("Select s From Student s Where s.age = :age")
     List<Student> findByAge(int age);
+
+    @Query("Select s From Student s Where s.age = :age And s.name = :name")
+    List<Student> findNameAndAge(int age, String name);
 }
