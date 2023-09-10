@@ -20,8 +20,6 @@ public class TestController {
 
     @GetMapping("/age")
     public StudentListResponse findAge(int age) {
-        System.out.println(age);
-
         return testService.findAge(age);
     }
 

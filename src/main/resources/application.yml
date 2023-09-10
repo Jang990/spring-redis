@@ -1,4 +1,7 @@
 spring:
+  output:
+    ansi:
+      enabled: always
   cache:
     type: redis
   redis:

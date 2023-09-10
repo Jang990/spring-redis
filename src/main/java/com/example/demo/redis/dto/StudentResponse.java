@@ -2,14 +2,12 @@ package com.example.demo.redis.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.redis.core.RedisHash;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@RedisHash(value = "student", timeToLive = 10)
+@NoArgsConstructor
 public class StudentResponse {
-    @Id
     private String studentNumber;
     private String name;
     private int age;
