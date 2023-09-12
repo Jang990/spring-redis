@@ -15,18 +15,19 @@ public class TestController {
 
     @PostMapping
     public Long save(StudentRequest request) {
+        System.out.println("===> SAVE 컨트롤러 실행");
         return testService.save(request);
     }
 
     @GetMapping("/age")
     public StudentListResponse findAge(int age) {
-        System.out.println(age);
-
+        System.out.println("===> FIND-AGE 컨트롤러 실행");
         return testService.findAge(age);
     }
 
     @GetMapping("/{id}")
     public StudentResponse find(@PathVariable Long id) {
+        System.out.println("===> FIND 컨트롤러 실행");
         return testService.find(id);
     }
 }
