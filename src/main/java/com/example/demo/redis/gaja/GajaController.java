@@ -1,13 +1,8 @@
 package com.example.demo.redis.gaja;
 
-import com.example.demo.redis.basic.TestService;
-import com.example.demo.redis.basic.dto.AgeAndNameRequest;
-import com.example.demo.redis.basic.dto.StudentListResponse;
-import com.example.demo.redis.basic.dto.StudentRequest;
-import com.example.demo.redis.basic.dto.StudentResponse;
-import com.example.demo.redis.gaja.dto.ClientInfoRequest;
-import com.example.demo.redis.gaja.dto.ClientRadiusSearchRequest;
-import com.example.demo.redis.gaja.dto.ClientSearchRequest;
+import com.example.demo.redis.gaja.dto.request.ClientInfoRequest;
+import com.example.demo.redis.gaja.dto.request.ClientRadiusSearchRequest;
+import com.example.demo.redis.gaja.dto.request.ClientSearchRequest;
 import com.example.demo.redis.gaja.dto.response.ClientListResponse;
 import com.example.demo.redis.gaja.dto.response.ClientResponse;
 import lombok.RequiredArgsConstructor;
