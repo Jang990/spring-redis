@@ -17,6 +17,7 @@ public class Client {
 
     @Column(nullable = false)
     private String name;
+    private String phoneNumber;
 
     @Embedded
     private ClientLocation location;
