@@ -1,4 +1,4 @@
-package com.example.demo.redis.dto;
+package com.example.demo.redis.basic.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

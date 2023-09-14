@@ -1,6 +1,6 @@
-package com.example.demo.redis.repository;
+package com.example.demo.redis.basic.repository;
 
-import com.example.demo.redis.domain.Student;
+import com.example.demo.redis.basic.domain.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

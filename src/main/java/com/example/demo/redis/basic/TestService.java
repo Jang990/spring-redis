@@ -1,11 +1,11 @@
-package com.example.demo.redis;
+package com.example.demo.redis.basic;
 
-import com.example.demo.redis.domain.Student;
-import com.example.demo.redis.dto.AgeAndNameRequest;
-import com.example.demo.redis.dto.StudentListResponse;
-import com.example.demo.redis.dto.StudentRequest;
-import com.example.demo.redis.dto.StudentResponse;
-import com.example.demo.redis.repository.StudentRepository;
+import com.example.demo.redis.basic.domain.Student;
+import com.example.demo.redis.basic.dto.AgeAndNameRequest;
+import com.example.demo.redis.basic.dto.StudentListResponse;
+import com.example.demo.redis.basic.dto.StudentRequest;
+import com.example.demo.redis.basic.dto.StudentResponse;
+import com.example.demo.redis.basic.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

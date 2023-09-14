@@ -1,6 +1,5 @@
-package com.example.demo.redis.domain;
+package com.example.demo.redis.basic.domain;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

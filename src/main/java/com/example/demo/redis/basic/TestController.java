@@ -1,9 +1,9 @@
-package com.example.demo.redis;
+package com.example.demo.redis.basic;
 
-import com.example.demo.redis.dto.AgeAndNameRequest;
-import com.example.demo.redis.dto.StudentListResponse;
-import com.example.demo.redis.dto.StudentRequest;
-import com.example.demo.redis.dto.StudentResponse;
+import com.example.demo.redis.basic.dto.AgeAndNameRequest;
+import com.example.demo.redis.basic.dto.StudentListResponse;
+import com.example.demo.redis.basic.dto.StudentRequest;
+import com.example.demo.redis.basic.dto.StudentResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
