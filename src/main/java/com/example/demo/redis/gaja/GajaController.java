@@ -8,6 +8,8 @@ import com.example.demo.redis.basic.dto.StudentResponse;
 import com.example.demo.redis.gaja.dto.ClientInfoRequest;
 import com.example.demo.redis.gaja.dto.ClientRadiusSearchRequest;
 import com.example.demo.redis.gaja.dto.ClientSearchRequest;
+import com.example.demo.redis.gaja.dto.response.ClientListResponse;
+import com.example.demo.redis.gaja.dto.response.ClientResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,26 +24,26 @@ public class GajaController {
     public Long save(ClientInfoRequest request) {
         System.out.println(request);
         System.out.println("===> Gaja.Client.SAVE 컨트롤러 실행");
-        return 1L;
+        return service.save(request);
     }
 
     @GetMapping("/{id}")
-    public void find(@PathVariable Long id) {
+    public ClientResponse find(@PathVariable Long id) {
         System.out.println("===> Gaja.Client.FIND 컨트롤러 실행");
-//        return testService.find(id);
+        return service.find(id);
     }
 
     @GetMapping("/client")
-    public void findAllInGroup(ClientSearchRequest request) {
+    public ClientListResponse findAllInGroup(ClientSearchRequest request) {
         System.out.println(request);
         System.out.println("===> Gaja.Client.고객전부찾기 컨트롤러 실행");
-//        return testService.findAge(request);
+        return service.findClientList(request);
     }
 
     @GetMapping("/client/nearby")
-    public void findRadius(ClientRadiusSearchRequest request) {
+    public ClientListResponse findRadius(ClientRadiusSearchRequest request) {
         System.out.println(request);
         System.out.println("===> Gaja.Client.반경검색 컨트롤러 실행");
-//        return testService.findAge(request);
+        return service.findRadius(request);
     }
 }
