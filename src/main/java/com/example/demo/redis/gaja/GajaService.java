@@ -55,8 +55,9 @@ public class GajaService {
     @Cacheable(value = "Group-Client", key = "#request.groupId")
     public ClientListResponse findClientList(ClientSearchRequest request) {
         System.out.println("=====> 고객전부찾기 서비스 실행");
-        List<ClientResponse> list = repository.findClients(request.getGroupId(), request.getLocation().getX(), request.getLocation().getY());
-        return new ClientListResponse(request.getGroupId(), list);
+//        List<ClientResponse> list = repository.findClients(request.getGroupId(), request.getLocation().getX(), request.getLocation().getY());
+//        return new ClientListResponse(request.getGroupId(), list);
+        return null;
     }
 
     @Caching(
