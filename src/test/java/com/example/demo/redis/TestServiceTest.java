@@ -6,8 +6,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class TestServiceTest {
 
-    @Autowired
-    private StudentRedisRepository studentRedisRepository;
+//    @Autowired
+//    private StudentRedisRepository studentRedisRepository;
 
 //    @Test
 //    @Rollback(value = false)

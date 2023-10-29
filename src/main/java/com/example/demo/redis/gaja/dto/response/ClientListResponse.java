@@ -9,6 +9,5 @@ import java.util.List;
 @AllArgsConstructor
 public class ClientListResponse {
     private Long groupId;
-    private String groupName;
     private List<ClientResponse> clientList;
 }

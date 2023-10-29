@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 public class ClientRadiusSearchRequest {
     private Long groupId;
     private LocationInfo location = new LocationInfo();
-    private int distance;
+    private Integer distance;
 
     public void setX(double x) {
         location.setX(x);
